@@ -1,0 +1,311 @@
+.gig {
+    display: flex;
+    justify-content: center;
+
+    .gigContainer {
+        width: 1400px;
+        padding: 3rem 0;
+        display: flex;
+        gap: 5rem;
+
+        .gigLeft {
+            width: 66.66%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .breadcrumbs {
+                font-weight: 300;
+                font-size: 1.3rem;
+                color: #555;
+            }
+
+            .gigUserInfo {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .userProfileImg {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                span {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+
+                .gigInfoRating {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    img {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        object-fit: cover;
+                    }
+
+                    span {
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        color: #ffc108;
+                    }
+                }
+            }
+
+            .slider .sliderContainer {
+                width: 80rem;
+
+                img {
+                    max-height: 45rem;
+                    object-fit: contain;
+                }
+            }
+
+            h3 {
+                font-weight: 400;
+            }
+
+            p {
+                font-weight: 300;
+                color: #555;
+                line-height: 2.5rem;
+            }
+
+            .sellerInfo {
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .sellerUser {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+
+                    img {
+                        width: 10rem;
+                        height: 10rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        .gigInfoRating {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+
+                            img {
+                                width: 1.4rem;
+                                height: 1.4rem;
+                                object-fit: cover;
+                            }
+
+                            span {
+                                font-size: 1.4rem;
+                                font-weight: bold;
+                                color: #ffc108;
+                            }
+                        }
+
+                        button {
+                            background-color: #fff;
+                            border-radius: 0.5rem;
+                            border: 1px solid #808080;
+                            padding: 1rem;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .infoBox {
+                    border: 1px solid #d3d3d3;
+                    border-radius: 0.5rem;
+                    padding: 2rem;
+                    margin-top: 2rem;
+
+
+                    .infoItems {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+
+                        .infoItem {
+                            width: 30rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                            margin-bottom: 2rem;
+
+                            .infoTitle {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+
+                    hr {
+                        height: 0;
+                        border: 1px solid #d3d3d3;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
+            .sellerReviews {
+                margin-top: 5rem;
+
+                .reviewItem {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    margin: 2rem 0;
+
+                    .reviewUser {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+
+                        .reviewUserImg {
+                            width: 5rem;
+                            height: 5rem;
+                            border-radius: 50%;
+                        }
+
+                        .userCountry {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            color: #808080;
+
+                            img {
+                                width: 2rem;
+                            }
+                        }
+                    }
+
+                    .gigInfoRating {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        img {
+                            width: 1.4rem;
+                            height: 1.4rem;
+                            object-fit: cover;
+                        }
+
+                        span {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #ffc108;
+                        }
+                    }
+
+                    .reviewHelpful {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+
+                        img {
+                            width: 1.4rem;
+                            cursor: pointer;
+                        }
+                    }
+
+                    hr {
+                        height: 0;
+                        border: 0.5px solid #d3d3d3;
+                        margin: 5rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .gigRight {
+        width: 33.33%;
+        border: 1px solid #d3d3d3;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: sticky;
+        top: 15rem;
+        height: max-content;
+        max-height: 50rem;
+
+        .gigPrice {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                font-weight: 300;
+            }
+
+            h4 {
+                font-weight: 500;
+            }
+        }
+
+        p {
+            color: #808080;
+            margin: 1rem 0;
+        }
+
+        .gigDetails {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.4rem;
+
+            .detailItem {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    width: 2rem;
+                }
+            }
+        }
+
+        .gigFeatures {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .featureItem {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-weight: 300;
+                color: #808080;
+
+                img {
+                    width: 1.4rem;
+                }
+            }
+        }
+
+        button {
+            background-color: #1dbf73;
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            font-weight: 500;
+            font-size: 1.8rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+        }
+    }
+}

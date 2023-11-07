@@ -1,0 +1,45 @@
+.orders {
+    display: flex;
+    justify-content: center;
+
+    .ordersContainer {
+        width: 1400px;
+        padding: 5rem 0;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+
+            tr {
+                height: 5rem;
+
+                th {
+                    text-align: left;
+                }
+
+                td {
+
+                    .orderImg {
+                        width: 5rem;
+                        height: 2.5rem;
+                        object-fit: cover;
+                    }
+
+                    .messageImg {
+                        width: 2rem;
+                        cursor: pointer;
+                    }
+                }
+
+                &:nth-child(even) {
+                    background-color: #219b620f;
+                }
+            }
+        }
+    }
+}

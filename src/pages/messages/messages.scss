@@ -1,0 +1,60 @@
+.messages {
+    display: flex;
+    justify-content: center;
+
+    .messagesContainer {
+        width: 1400px;
+        padding: 5rem 0;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+
+            tr {
+                height: 10rem;
+
+                th {
+                    text-align: left;
+                }
+
+                td {
+                    padding: 1rem;
+
+                    &:first-child {
+                        font-weight: 500;
+
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        color: #808080;
+                    }
+                }
+
+                button {
+                    background-color: #1dbf73;
+                    color: #fff;
+                    font-weight: 500;
+                    border: none;
+                    padding: 1rem;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+                    display: none;
+                }
+
+                &.active {
+                    background-color: #219b620f;
+
+                    button{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
