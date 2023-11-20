@@ -1,0 +1,55 @@
+.myGigs {
+    display: flex;
+    justify-content: center;
+
+    .myGigsContainer {
+        width: 1400px;
+        padding: 5rem 0;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                background-color: #1dbf73;
+                color: #fff;
+                font-weight: 500;
+                border: none;
+                padding: 1rem;
+                cursor: pointer;
+                border-radius: 0.5rem;
+            }
+        }
+
+        table {
+            width: 100%;
+
+            tr {
+                height: 5rem;
+
+                th {
+                    text-align: left;
+                }
+
+                td {
+
+                    .gigImg {
+                        width: 5rem;
+                        height: 2.5rem;
+                        object-fit: cover;
+                    }
+
+                    .deleteImg {
+                        width: 2rem;
+                        cursor: pointer;
+                    }
+                }
+
+                &:nth-child(even) {
+                    background-color: #219b620f;
+                }
+            }
+        }
+    }
+}
