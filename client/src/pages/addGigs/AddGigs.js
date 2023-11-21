@@ -31,8 +31,9 @@ const AddGigs = () => {
     try {
       const coverImg = await upload(file);
 
+      let filesArray = Array.from(files);
       const images = await Promise.all(
-        [...files].map(async (fi) => {
+        filesArray.map(async (fi) => {
           const url = await upload(fi);
           return url;
         })
@@ -94,7 +95,7 @@ const AddGigs = () => {
                   type="file"
                   name="coverImg"
                   id="coverImg"
-                  onInput={(e) => setFile(e.target.files[0])}
+                  onChange={(e) => setFile(e.target.files[0])}
                 />
                 <label htmlFor="images">Upload Images</label>
                 <input
@@ -102,10 +103,13 @@ const AddGigs = () => {
                   name="images"
                   id="images"
                   multiple
-                  onInput={(e) => setFiles(e.target.files)}
+                  onChange={(e) => setFiles(e.target.files)}
                 />
               </div>
-              <button onClick={handleUploads}>
+              <button
+                onClick={handleUploads}
+                disabled={uploading ? true : false}
+              >
                 {uploading ? "Uploading.." : "Upload"}
               </button>
             </div>
@@ -118,7 +122,9 @@ const AddGigs = () => {
               placeholder="Brief descriptions to introduce your service to customers"
               onChange={handleChange}
             ></textarea>
-            <button onClick={handleSubmit}>Create</button>
+            <button onClick={handleSubmit} disabled={uploading ? true : false}>
+              {uploading ? "Please Wait..." : "Create"}
+            </button>
           </div>
           <div className="addRight">
             <label htmlFor="shortTitle">Service Title</label>

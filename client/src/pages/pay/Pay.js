@@ -18,6 +18,7 @@ const Pay = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
+        console.log("Component Mounted");
         const res = await newRequest.post(
           `/orders/create-payment-intent/${id}`
         );
@@ -27,7 +28,7 @@ const Pay = () => {
       }
     };
     makeRequest();
-  }, []);
+  }, [id]);
 
   const appearance = {
     theme: "stripe",
