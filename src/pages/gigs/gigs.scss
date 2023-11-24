@@ -1,0 +1,103 @@
+.gigs {
+    display: flex;
+    justify-content: center;
+
+
+    .gigsContainer {
+        width: 1400px;
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .breadcrumbs {
+            font-weight: 300;
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        p {
+            color: #999;
+            font-weight: 300;
+        }
+
+        .gigsMenu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .menuLeft {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                color: #555;
+                font-weight: 300;
+
+                input {
+                    padding: 0.5rem;
+                    border: 1px solid #d3d3d3;
+                    outline: none;
+
+                    &::placeholder {
+                        color: #808080;
+                    }
+                }
+
+                button {
+                    background-color: #1dbf73;
+                    color: #fff;
+                    font-weight: 500;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .menuRight {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                position: relative;
+
+                .gigsSortby {
+                    color: #555;
+                    font-weight: 300;
+                }
+
+                .gigsSorttype {
+                    font-weight: 500;
+                }
+
+                img {
+                    width: 1.5rem;
+                    cursor: pointer;
+                }
+
+                .rightMenu {
+                    position: absolute;
+                    top: 3rem;
+                    right: 0;
+                    padding: 2rem;
+                    background-color: #fff;
+                    border-radius: 0.5rem;
+                    border: 0.5px solid #d3d3d3;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    color: #555;
+
+                    span {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .gigCards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
