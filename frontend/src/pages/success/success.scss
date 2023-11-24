@@ -1,0 +1,14 @@
+.success{
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12rem 0 13rem;
+
+    p{
+        color: green;
+        font-weight: 700;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,95 @@
+.gigCard {
+    width: 32.4rem;
+    height: 40rem;
+    border: 1px solid rgb(239, 238, 238);
+    margin-bottom: 4rem;
+    border-radius: 0.5rem;
+
+    img {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    .gigInfo {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .gigUserInfo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                width: 2.6rem;
+                height: 2.6rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        p {
+            color: #111;
+        }
+
+        .gigRating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            img {
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+
+            span {
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: #ffc108;
+            }
+        }
+    }
+
+    hr {
+        height: 0;
+        border: 0.5px solid rgb(239, 238, 238);
+    }
+
+    .gigDetails {
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 1.6rem;
+            height: 1.6rem;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .gigPrice {
+
+            span {
+                color: #999;
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                color: #555;
+                font-size: 1.8rem;
+                font-weight: 400;
+                text-align: end;
+            }
+
+            sup {
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+        }
+    }
+}

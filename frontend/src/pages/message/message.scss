@@ -1,0 +1,89 @@
+.message {
+    display: flex;
+    justify-content: center;
+
+    .messageContainer {
+        width: 1200px;
+        margin: 5rem;
+
+        .breadcrumbs {
+            font-weight: 300;
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        .messageBlock {
+            margin: 3rem 0;
+            padding: 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            height: 50rem;
+            overflow: scroll;
+
+            .messageItem {
+                display: flex;
+                gap: 2rem;
+                max-width: 60rem;
+                font-size: 1.8rem;
+
+                &.owner {
+                    flex-direction: row-reverse;
+                    align-self: flex-end;
+
+                    p {
+                        border-radius: 2rem 0 2rem 2rem;
+                        background-color: royalblue;
+                        color: #fff;
+                    }
+                }
+
+                img {
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                p {
+                    padding: 2rem;
+                    background-color: rgb(238, 235, 235);
+                    border-radius: 0 2rem 2rem 2rem;
+                    color: #6d6b6b;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        hr {
+            height: 0;
+            border: 0.5px solid rgb(232, 230, 230);
+            margin-bottom: 2rem;
+        }
+
+        .writeBlock {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            textarea {
+                width: 80%;
+                height: 10rem;
+                padding: 1rem;
+                border: 1px solid #d3d3d3;
+                border-radius: 1rem;
+            }
+
+            button {
+                background-color: #1dbf73;
+                color: #fff;
+                font-weight: 500;
+                border: none;
+                padding: 2rem;
+                cursor: pointer;
+                border-radius: 1rem;
+                width: 10rem;
+            }
+        }
+    }
+}
