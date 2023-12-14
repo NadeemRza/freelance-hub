@@ -1,16 +1,33 @@
+@import "../../App.scss";
+
 .slider {
     display: flex;
     justify-content: center;
     padding: 10rem 0;
 
     .sliderContainer {
-        width: 1400px;
+        width: min(1400px, 95vw);
 
         .swiper-button-prev, .swiper-button-next{
             color: rgb(255, 20, 3);
             background-color: gray;
             padding: 3.5rem 3rem;
             border-radius: 50%;
+
+            @include mobile{
+                padding: 2rem;
+            }
+
+            &:after{
+
+                @include mobile{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .swiper-wrapper{
+            gap: 1rem;
         }
     }
 }

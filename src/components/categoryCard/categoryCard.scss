@@ -1,5 +1,5 @@
 .categoryCard {
-    width: 25.2rem;
+    width: 90%;
     height: 34.4rem;
     color: #fff;
     border-radius: 0.5rem;
@@ -10,6 +10,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 0.5rem;
     }
 
     .desc {

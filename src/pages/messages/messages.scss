@@ -1,6 +1,9 @@
+@import "../../App.scss";
+
 .messages {
     display: flex;
     justify-content: center;
+    margin: 0 1rem;
 
     .messagesContainer {
         width: 1400px;
@@ -10,6 +13,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @include mobile{
+                justify-content: center;
+            }
         }
 
         table {
@@ -20,6 +27,10 @@
 
                 th {
                     text-align: left;
+
+                    @include mobile{
+                        text-align: center;
+                    }
                 }
 
                 td {
@@ -45,6 +56,11 @@
                     cursor: pointer;
                     border-radius: 0.5rem;
                     display: none;
+
+                    @include mobile{
+                        font-size: 1rem;
+                        line-height: 0.9rem;
+                    }
                 }
 
                 &.active {

@@ -3,17 +3,17 @@
     height: 10rem;
     display: flex;
     justify-content: center;
-
-
+    
     .trustedByContainer {
         width: 76rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        column-gap: 2rem;
         color: #d3d3d3;
         font-weight: 500;
-
+        flex-wrap: wrap;
+        
         img {
             height: 5rem;
             object-fit: contain;

@@ -33,7 +33,6 @@ const AddGigs = () => {
               rows="16"
               placeholder="Brief descriptions to introduce your service to customers"
             ></textarea>
-            <button>Create</button>
           </div>
           <div className="addRight">
             <label htmlFor="service_title">Service Title</label>
@@ -83,6 +82,9 @@ const AddGigs = () => {
             <label htmlFor="price">Price</label>
             <input type="number" name="price" id="price" min={1} />
           </div>
+        </div>
+        <div className="addButtonContainer">
+          <button>Create</button>
         </div>
       </div>
     </div>

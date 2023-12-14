@@ -23,7 +23,7 @@ const App = () => {
         <Modal openModal={openModal} setOpenModal={setOpenModal} />
         <Navbar />
         <Outlet />
-        <Footer openModal={openModal} setOpenModal={setOpenModal} />
+        {/* <Footer openModal={openModal} setOpenModal={setOpenModal} /> */}
       </div>
     );
   };
