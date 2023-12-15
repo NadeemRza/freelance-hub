@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .orders {
     display: flex;
     justify-content: center;
@@ -10,10 +12,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @include mobile {
+                display: block;
+                text-align: center;
+            }
         }
 
         table {
             width: 100%;
+            padding: 1rem 1rem 0;
 
             tr {
                 height: 5rem;
@@ -40,16 +48,6 @@
                     background-color: #219b620f;
                 }
             }
-
-        }
-
-        .no_order_text {
-            font-size: 2.5rem;
-            margin-top: 2rem;
-            text-align: center;
-            color: #1bdf73;
-            width: 100%;
-            font-weight: 800;
         }
     }
 }

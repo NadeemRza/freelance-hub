@@ -14,22 +14,66 @@ const Home = () => {
     <div className="home">
       <Featured />
       <TrustedBy />
-      <Slider slidesToShow={5}>
-        {cards.map((card) => (
-          <SwiperSlide key={card.id}>
-            <CategoryCard item={card} />
-          </SwiperSlide>
-        ))}
-      </Slider>
+      {window.innerWidth > 999 ? (
+        <Slider slidesToShow={5}>
+          {cards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <CategoryCard item={card} />
+            </SwiperSlide>
+          ))}
+        </Slider>
+      ) : window.innerWidth > 700 ? (
+        <Slider slidesToShow={3}>
+          {cards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <CategoryCard item={card} />
+            </SwiperSlide>
+          ))}
+        </Slider>
+      ) : (
+        <Slider slidesToShow={2}>
+          {cards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <CategoryCard item={card} />
+            </SwiperSlide>
+          ))}
+        </Slider>
+      )}
       <FeaturedVideo />
       <FeaturedImage />
-      <Slider slidesToShow={4}>
-        {projects.map((project) => (
-          <SwiperSlide key={project.id}>
-            <ProjectCard item={project} />
-          </SwiperSlide>
-        ))}
-      </Slider>
+      {window.innerWidth > 999 ? (
+        <Slider slidesToShow={4}>
+          {projects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <ProjectCard item={project} />
+            </SwiperSlide>
+          ))}
+        </Slider>
+      ) : window.innerWidth > 600 ? (
+        <Slider slidesToShow={3}>
+          {projects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <ProjectCard item={project} />
+            </SwiperSlide>
+          ))}
+        </Slider>
+      ) : window.innerWidth > 450 ? (
+        <Slider slidesToShow={2}>
+          {projects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <ProjectCard item={project} />
+            </SwiperSlide>
+          ))}
+        </Slider>
+      ) : (
+        <Slider slidesToShow={1}>
+          {projects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <ProjectCard item={project} />
+            </SwiperSlide>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };

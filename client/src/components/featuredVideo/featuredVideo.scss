@@ -1,15 +1,22 @@
+@import "../../App.scss";
+
 .featuredVideo {
     background-color: #f1fdf7;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10rem 0;
+    padding: 8rem 0;
 
     .featuredVideoContainer {
         width: 1400px;
         display: flex;
         align-items: center;
-        gap: 20rem;
+        flex-wrap: wrap;
+        gap: 10rem;
+
+        @include mobile {
+            flex-direction: column;
+        }
 
         .featuredVideoLeft {
             flex: 2;
@@ -17,9 +24,18 @@
             flex-direction: column;
             gap: 1.5rem;
 
+            @include mobile {
+                width: 75vw;
+            }
+
             h2 {
                 font-weight: 500;
                 margin-bottom: 1rem;
+
+                @include mobile {
+                    text-align: center;
+                    text-transform: capitalize;
+                }
             }
 
             .featuredVideoLogoContainer {
@@ -50,11 +66,15 @@
         .featuredVideoRight {
             flex: 3;
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
 
             video {
-                width: 720px;
+                width: 65rem;
+
+                @include mobile {
+                    width: 75vw;
+                }
             }
         }
 

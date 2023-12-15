@@ -16,6 +16,7 @@
         .top {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .ftitems {
                 display: flex;
@@ -43,7 +44,10 @@
         .bottom {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 2rem;
+            column-gap: 35rem;
 
             .left {
                 display: flex;
@@ -72,12 +76,13 @@
                     gap: 1rem;
                 }
 
-                .language_link, .currency_link{
+                .language_link,
+                .currency_link {
                     padding: 0.45rem;
                     border-radius: 0.5rem;
                     border: 1.5px solid #bab9b9;
 
-                    select{
+                    select {
                         font-size: 1.45rem;
                         color: #555;
                         border: none;

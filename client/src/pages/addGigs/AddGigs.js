@@ -65,8 +65,6 @@ const AddGigs = () => {
     navigate("/mygigs");
   };
 
-  console.log(state);
-
   return (
     <div className="addGigs">
       <div className="addGigsContainer">
@@ -122,9 +120,6 @@ const AddGigs = () => {
               placeholder="Brief descriptions to introduce your service to customers"
               onChange={handleChange}
             ></textarea>
-            <button onClick={handleSubmit} disabled={uploading ? true : false}>
-              {uploading ? "Please Wait..." : "Create"}
-            </button>
           </div>
           <div className="addRight">
             <label htmlFor="shortTitle">Service Title</label>
@@ -195,6 +190,11 @@ const AddGigs = () => {
               onChange={handleChange}
             />
           </div>
+        </div>
+        <div className="addButtonContainer">
+          <button onClick={handleSubmit} disabled={uploading ? true : false}>
+            {uploading ? "Please Wait..." : "Create"}
+          </button>
         </div>
       </div>
     </div>

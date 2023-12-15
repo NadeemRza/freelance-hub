@@ -1,12 +1,16 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./navbar.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import userImg from "../../assets/user.jpg";
 import newRequest from "../../utils/newRequest";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
+  const iconRef = useRef();
+  const [showNav, setShowNav] = useState(false);
 
   const { pathname } = useLocation();
 
@@ -26,6 +30,10 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
+  const handleNav = () => {
+    setShowNav((showNav) => !showNav);
+  };
+
   const handleLogout = async () => {
     try {
       await newRequest.post("/auth/logout");
@@ -39,6 +47,20 @@ const Navbar = () => {
   return (
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="navContainer">
+        {!showNav && (
+          <MenuIcon
+            onClick={handleNav}
+            ref={iconRef}
+            className="hamburger_icon hide"
+          />
+        )}
+        {showNav && (
+          <CloseIcon
+            onClick={handleNav}
+            ref={iconRef}
+            className="hamburger_icon hide"
+          />
+        )}
         <div className="navLogoContainer">
           <Link to="/">
             <span className="logo_text">FreelanceHub</span>
@@ -56,7 +78,9 @@ const Navbar = () => {
             English
           </Link>
           {!currentUser?.isSeller && (
-            <span className="links">Become a Seller</span>
+            <Link to="/register" className="links">
+              Become a Seller
+            </Link>
           )}
 
           {!currentUser && (
@@ -89,6 +113,54 @@ const Navbar = () => {
             </div>
           )}
         </div>
+        {showNav && (
+          <div className="navLinks mobile">
+            <Link to="/" className="links">
+              FreelanceHub Business
+            </Link>
+            <Link to="/" className="links">
+              Explore
+            </Link>
+            <Link to="/" className="links">
+              English
+            </Link>
+            {!currentUser?.isSeller && (
+              <Link to="/register" className="links">
+                Become a Seller
+              </Link>
+            )}
+            <Link to="/login" className="links">
+              Sign in
+            </Link>
+            {!currentUser && (
+              <Link to="/register" className="join_button">
+                Join
+              </Link>
+            )}
+            {currentUser && (
+              <div
+                className="user"
+                onClick={() => setOpenOptions(!openOptions)}
+              >
+                <img src={userImg} alt="profile_pic" />
+                <span>{currentUser?.username}</span>
+                {openOptions && (
+                  <div className="options">
+                    {currentUser?.isSeller && (
+                      <>
+                        <Link to="/mygigs">Gigs</Link>
+                        <Link to="/add">Add New Gig</Link>
+                      </>
+                    )}
+                    <Link to="/orders">Orders</Link>
+                    <Link to="/messages">Messages</Link>
+                    <Link to="/">Logout</Link>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
       </div>
       {(active || pathname !== "/") && (
         <>
